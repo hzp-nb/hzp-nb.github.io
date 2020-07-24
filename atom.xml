@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-24T07:58:53.068Z</updated>
+  <updated>2020-07-24T08:43:06.985Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,23 +18,28 @@
   
   <entry>
     <title>PHP数组函数的学习</title>
-    <link href="http://yoursite.com/2020/07/24/PHP%E6%95%B0%E7%BB%84%E5%87%BD%E6%95%B0%E7%9A%84%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://yoursite.com/2020/07/24/PHP%E6%95%B0%E7%BB%84%E5%87%BD%E6%95%B0%E7%9A%84%E5%AD%A6%E4%B9%A0/</id>
-    <published>2020-07-24T07:58:53.076Z</published>
-    <updated>2020-07-24T07:58:53.068Z</updated>
+    <link href="http://yoursite.com/2020/07/24/test/"/>
+    <id>http://yoursite.com/2020/07/24/test/</id>
+    <published>2020-07-24T08:34:17.000Z</published>
+    <updated>2020-07-24T08:43:06.985Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;PHP数组函数的学习&quot;&gt;&lt;a href=&quot;#PHP数组函数的学习&quot; class=&quot;headerlink&quot; title=&quot;PHP数组函数的学习&quot;&gt;&lt;/a&gt;PHP数组函数的学习&lt;/h2&gt;&lt;h3 id=&quot;数组相关函数&quot;&gt;&lt;a href=&quot;#数组相关函数&quot; class=&quot;headerlink&quot; title=&quot;数组相关函数&quot;&gt;&lt;/a&gt;数组相关函数&lt;/h3&gt;&lt;h4 id=&quot;1-排序函数&quot;&gt;&lt;a href=&quot;#1-排序函数&quot; class=&quot;headerlink&quot; title=&quot;1)    排序函数:&quot;&gt;&lt;/a&gt;1)    排序函数:&lt;/h4&gt;&lt;p&gt;对数组元素进行排序&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;sort()：顺序排序(下标重排)&lt;/p&gt;
-&lt;p&gt;rsort()：逆序排序&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;lt;?php&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    $arr = &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;&amp;lt;pre&amp;gt;&#39;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	$sort_arr = sort($arr);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	print_r($arr);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;PHP数组函数的学习&quot;&gt;&lt;a href=&quot;#PHP数组函数的学习&quot; class=&quot;headerlink&quot; title=&quot;PHP数组函数的学习&quot;&gt;&lt;/a&gt;PHP数组函数的学习&lt;/h2&gt;&lt;h3 id=&quot;数组相关函数&quot;&gt;&lt;a href=&quot;#数组相关函数&quot;
+        
+      
     
     </summary>
     
     
+      <category term="PHP数组" scheme="http://yoursite.com/categories/PHP%E6%95%B0%E7%BB%84/"/>
+    
+    
+      <category term="PHP" scheme="http://yoursite.com/tags/PHP/"/>
     
   </entry>
   
