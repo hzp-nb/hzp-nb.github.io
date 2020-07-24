@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-24T08:46:34.378Z</updated>
+  <updated>2020-07-24T12:34:24.039Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数组学习(数组学习)</title>
+    <link href="http://yoursite.com/2020/07/24/shuzu/"/>
+    <id>http://yoursite.com/2020/07/24/shuzu/</id>
+    <published>2020-07-24T12:05:30.000Z</published>
+    <updated>2020-07-24T12:34:24.039Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;数组学习（数组遍历）&quot;&gt;&lt;a href=&quot;#数组学习（数组遍历）&quot; class=&quot;headerlink&quot; title=&quot;数组学习（数组遍历）&quot;&gt;&lt;/a&gt;数组学习（数组遍历）&lt;/h2&gt;&lt;h3 id=&quot;数组遍历&quot;&gt;&lt;a href=&quot;#数组遍历&quot; class=&quot;headerlink&quot; title=&quot;数组遍历&quot;&gt;&lt;/a&gt;数组遍历&lt;/h3&gt;&lt;p&gt;数组遍历：普通数组数据的访问都是通过数组元素下标来实现访问，如果说数组中所有的数据都需要依次输出出来，就需要我们使用到一些简化的规则来实现自动获取下标以及输出数组元素。&lt;/p&gt;
+&lt;p&gt;$arr = array(0 =&amp;gt; array(‘name’ =&amp;gt; ‘Tom’),1=&amp;gt;array(‘name’ =&amp;gt; ‘Jim’)); //二维数组&lt;/p&gt;
+&lt;p&gt;//访问一维元素：$arr[一维下标]&lt;/p&gt;
+&lt;p&gt;$arr[0];    //结果：array(‘name’ =&amp;gt; ‘Tom’);&lt;/p&gt;
+&lt;p&gt;//访问二维元素： $arr[一维下标] [二维下标]&lt;/p&gt;
+&lt;p&gt;$arr[1] [‘name’];        //Jim&lt;/p&gt;
+&lt;h3 id=&quot;Foreach遍历语法&quot;&gt;&lt;a href=&quot;#Foreach遍历语法&quot; class=&quot;headerlink&quot; title=&quot;Foreach遍历语法&quot;&gt;&lt;/a&gt;Foreach遍历语法&lt;/h3&gt;&lt;p&gt;基本语法如下：&lt;/p&gt;
+&lt;p&gt;Foreach($数组变量 as[$下标 =&amp;gt;] $值){&lt;/p&gt;
+&lt;p&gt;​        //通过$下标访问元素的下标；通过$值访问元素的值&lt;/p&gt;
+&lt;p&gt;}&lt;/p&gt;
+&lt;p&gt;通常：如果是关联数组(字母下标)，就需要下标，如果是数字下标就直接访问值&lt;/p&gt;
+&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;lt;?php&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    $arr = &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;9&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;foreach&lt;/span&gt;($arr &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; $v)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;echo&lt;/span&gt; $v,&lt;span class=&quot;string&quot;&gt;&#39;&amp;lt;br/&amp;gt;&#39;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="PHP数组" scheme="http://yoursite.com/categories/PHP%E6%95%B0%E7%BB%84/"/>
+    
+    
+      <category term="PHP" scheme="http://yoursite.com/tags/PHP/"/>
+    
+  </entry>
   
   <entry>
     <title>PHP数组函数的学习</title>

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    数组学习(数组学习) |  xiaoxiao
+  </title>
+  <meta name="generator" content="hexo-theme-ayer">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+  
+  
+
+  
+
+<link rel="alternate" href="/atom.xml" title="xiaoxiao" type="application/atom+xml">
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    
+      <canvas class="fireworks"></canvas>
+      <style>
+        .fireworks {
+          position: fixed;
+          left: 0;
+          top: 0;
+          z-index: 99999;
+          pointer-events: none;
+        }
+      </style>
+      
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-shuzu"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  数组学习(数组学习)
+</h1>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/07/24/shuzu/" class="article-date">
+  <time datetime="2020-07-24T12:05:30.000Z" itemprop="datePublished">2020-07-24</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/PHP%E6%95%B0%E7%BB%84/">PHP数组</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">1.2k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">4 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="数组学习（数组遍历）"><a href="#数组学习（数组遍历）" class="headerlink" title="数组学习（数组遍历）"></a>数组学习（数组遍历）</h2><h3 id="数组遍历"><a href="#数组遍历" class="headerlink" title="数组遍历"></a>数组遍历</h3><p>数组遍历：普通数组数据的访问都是通过数组元素下标来实现访问，如果说数组中所有的数据都需要依次输出出来，就需要我们使用到一些简化的规则来实现自动获取下标以及输出数组元素。</p>
+<p>$arr = array(0 =&gt; array(‘name’ =&gt; ‘Tom’),1=&gt;array(‘name’ =&gt; ‘Jim’)); //二维数组</p>
+<p>//访问一维元素：$arr[一维下标]</p>
+<p>$arr[0];    //结果：array(‘name’ =&gt; ‘Tom’);</p>
+<p>//访问二维元素： $arr[一维下标] [二维下标]</p>
+<p>$arr[1] [‘name’];        //Jim</p>
+<h3 id="Foreach遍历语法"><a href="#Foreach遍历语法" class="headerlink" title="Foreach遍历语法"></a>Foreach遍历语法</h3><p>基本语法如下：</p>
+<p>Foreach($数组变量 as[$下标 =&gt;] $值){</p>
+<p>​        //通过$下标访问元素的下标；通过$值访问元素的值</p>
+<p>}</p>
+<p>通常：如果是关联数组(字母下标)，就需要下标，如果是数字下标就直接访问值</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    $arr = <span class="keyword">array</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">foreach</span>($arr <span class="keyword">as</span> $v)&#123;</span><br><span class="line">        <span class="keyword">echo</span> $v,<span class="string">'&lt;br/&gt;'</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p><img src="https://raw.githubusercontent.com/hzp-nb/picbed/master/img/image-20200701100658978.png" alt=""></p>
+<p>获取下标</p>
+<p><img src="https://raw.githubusercontent.com/hzp-nb/picbed/master/img/image-20200701101916605.png" alt=""></p>
+<p>在进行数据存储定义的时候，通常二维数组不会两个维度的key下标都为数字，一般是一维为数字(无意义)，二维为字符串(数据库表字段)，所以在进行遍历的时候，通常是只需要针对一维进行遍历，取得二维数据元素，然后二维数组元素通过下标去访问。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$arr = <span class="keyword">array</span>(</span><br><span class="line">	    <span class="number">0</span> =&gt; <span class="keyword">array</span>(<span class="string">'name'</span> =&gt; <span class="string">'Tom'</span>,<span class="string">'age'</span> =&gt; <span class="number">30</span>),</span><br><span class="line">    	<span class="number">1</span> =&gt; <span class="keyword">array</span>(<span class="string">'name'</span> =&gt; <span class="string">'Jim'</span>,<span class="string">'age'</span> =&gt; <span class="number">28</span>)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">foreach</span>($arr <span class="keyword">as</span> $value)&#123;</span><br><span class="line">   	<span class="keyword">echo</span> <span class="string">'name is :'</span>,$value[<span class="string">'name'</span>],<span class="string">' and age is : '</span>,$value[<span class="string">'age'</span>],<span class="string">'&lt;br/&gt;'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/hzp-nb/picbed/master/img/image-20200701103925283.png" alt=""></p>
+<h3 id="Foreach遍历原理"><a href="#Foreach遍历原理" class="headerlink" title="Foreach遍历原理"></a>Foreach遍历原理</h3><p>Foreach遍历的原理：本质是数组的内部有一颗指针，默认是指向数组元素的第一个元素，Foreach就是利用指针去获取数据，同时移动指针。</p>
+<p>Foreach($arr as $k =&gt; $v){</p>
+<p>​                //循环体</p>
+<p>}</p>
+<h5 id="1、foreach会重置指针：让指针指向第一个元素；"><a href="#1、foreach会重置指针：让指针指向第一个元素；" class="headerlink" title="1、foreach会重置指针：让指针指向第一个元素；"></a>1、foreach会重置指针：让指针指向第一个元素；</h5><h5 id="2、进入foreach循环：通过指针取得当前第一个元素，然后将下标取出放到对应的下标变量-k中-如果存在-；将值取出来放到对应的值变量-v中；-指针下移"><a href="#2、进入foreach循环：通过指针取得当前第一个元素，然后将下标取出放到对应的下标变量-k中-如果存在-；将值取出来放到对应的值变量-v中；-指针下移" class="headerlink" title="2、进入foreach循环：通过指针取得当前第一个元素，然后将下标取出放到对应的下标变量$k中(如果存在)；将值取出来放到对应的值变量$v中；(指针下移)"></a>2、进入foreach循环：通过指针取得当前第一个元素，然后将下标取出放到对应的下标变量$k中(如果存在)；将值取出来放到对应的值变量$v中；(指针下移)</h5><h5 id="3、进入到循环内部-循环体-，开始执行"><a href="#3、进入到循环内部-循环体-，开始执行" class="headerlink" title="3、进入到循环内部(循环体)，开始执行"></a>3、进入到循环内部(循环体)，开始执行</h5><h5 id="4、重复2和3，知道在2的时候遇到指针取不到的内容-指针指向数组最后"><a href="#4、重复2和3，知道在2的时候遇到指针取不到的内容-指针指向数组最后" class="headerlink" title="4、重复2和3，知道在2的时候遇到指针取不到的内容(指针指向数组最后)"></a>4、重复2和3，知道在2的时候遇到指针取不到的内容(指针指向数组最后)</h5><h3 id="For循环遍历数组"><a href="#For循环遍历数组" class="headerlink" title="For循环遍历数组"></a>For循环遍历数组</h3><p>For循环：基于已知边界条件(起始和结束)然后又条件的变化(规律)</p>
+<p>因此：for循环遍历数组有对应的条件</p>
+<h4 id="1、获取数组长度：count-数组得到数组元素的长度"><a href="#1、获取数组长度：count-数组得到数组元素的长度" class="headerlink" title="1、获取数组长度：count(数组得到数组元素的长度)"></a>1、获取数组长度：count(数组得到数组元素的长度)</h4><h4 id="2、要求数组元素的下标是规律的数字"><a href="#2、要求数组元素的下标是规律的数字" class="headerlink" title="2、要求数组元素的下标是规律的数字"></a>2、要求数组元素的下标是规律的数字</h4><h5 id="实例："><a href="#实例：" class="headerlink" title="实例："></a>实例：</h5><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    $arr = <span class="keyword">array</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">10</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//for($i = 0 ; $i &lt; count($arr); $i++)&#123;</span></span><br><span class="line">	<span class="keyword">for</span>($i = <span class="number">0</span>,$len = count($arr); $i &lt; $len; $i++)&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">'key is : '</span>,$i,<span class="string">'and value is:'</span>,$arr[$i],<span class="string">'&lt;br/&gt;'</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/hzp-nb/picbed/master/img/image-20200702203912676.png" alt=""></p>
+<h3 id="While配合each和list遍历数组"><a href="#While配合each和list遍历数组" class="headerlink" title="While配合each和list遍历数组"></a>While配合each和list遍历数组</h3><p>While是在外部定义边界条件，如果要实现可以和for循环</p>
+<h4 id="Each函数使用："><a href="#Each函数使用：" class="headerlink" title="Each函数使用："></a>Each函数使用：</h4><p>each能够从一个数组中获取当前数组指针所指向的元素的下标和值，拿到之后将数组指针下移，同时将拿到的元素下标和值以一个四个元素的数组返回：</p>
+<p>0下标  - 》取得元素的下标值</p>
+<p>1下标  - 》取得元素的值</p>
+<p>key 下标  - 》取得元素的下标值</p>
+<p>value 下标  - 》取得元素的值</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    $arr = <span class="keyword">array</span>(<span class="number">1</span>,<span class="string">'name'</span> =&gt; <span class="string">'Tom'</span>,<span class="number">3</span>,<span class="string">'age'</span> =&gt; <span class="number">30</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">echo</span> <span class="string">'&lt;pre&gt;'</span>;</span><br><span class="line">	print_r(each($arr));</span><br><span class="line">	print_r(each($arr));</span><br></pre></td></tr></table></figure>
+
+<p>  <img src="https://raw.githubusercontent.com/hzp-nb/picbed/master/img/20200724203008.png" alt=""></p>
+<p>如果each取不到结果(数组指针移动到最后)，返回false</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    $arr = <span class="keyword">array</span>(<span class="number">1</span>,<span class="string">'name'</span> =&gt; <span class="string">'Tom'</span>,<span class="number">3</span>,<span class="string">'age'</span> =&gt; <span class="number">30</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">echo</span> <span class="string">'&lt;pre&gt;'</span>;</span><br><span class="line">	print_r(each($arr));</span><br><span class="line">	print_r(each($arr));</span><br><span class="line">	print_r(each($arr));</span><br><span class="line">	print_r(each($arr));</span><br><span class="line">	var_dump(each($arr));</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/hzp-nb/picbed/master/img/image-20200703144454200.png" alt=""></p>
+<h4 id="List函数使用："><a href="#List函数使用：" class="headerlink" title="List函数使用："></a>List函数使用：</h4><p>list是一种结构，不是一种函数(没有返回值)，是List提供一堆变量去从一个数组中取得元素值，然后依次存放到对应的变量中(批量为变量赋值：值来源于数组)list必须从索引数组中去获取数据，而且必须从0开始。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    $arr = <span class="keyword">array</span>(<span class="number">1</span>,<span class="number">2</span> =&gt; <span class="number">1</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">list</span>($first) = $arr;</span><br><span class="line">	var_dump($first);</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/hzp-nb/picbed/master/img/image-20200703163803883.png" alt=""></p>
+<p>错误操作：变量多于数组元素，没有指定从0到指定变量的下标数组元素</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    $arr = <span class="keyword">array</span>(<span class="number">1</span>,<span class="number">2</span> =&gt; <span class="number">1</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">list</span>($first) = $arr;</span><br><span class="line">	<span class="keyword">list</span>($first,$second) = $arr;</span><br><span class="line">	var_fump($first,$second);</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/hzp-nb/picbed/master/img/20200724202955.png" alt=""></p>
+<p>list 与 each配合特别好：each一定有两个元素就是0和1下标元素</p>
+<p>list(变量1，变量2) = each数组；         //是一种赋值运算，但是可以得到false变量(each取不到正确的结果)，整个表达式为false</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">![](https:<span class="comment">//raw.githubusercontent.com/hzp-nb/picbed/master/img/image-20200703204339699.png)<span class="meta">&lt;?php</span></span></span><br><span class="line">    $arr = <span class="keyword">array</span>(<span class="number">1</span>,<span class="string">'name'</span> =&gt; <span class="string">'Tom'</span>,<span class="number">3</span>,<span class="string">'age'</span> =&gt; <span class="number">30</span>);</span><br><span class="line">    </span><br><span class="line">	<span class="keyword">while</span>(<span class="keyword">list</span>($key,$value) = each($arr))&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">'key is :'</span>. $key . <span class="string">' value is :'</span>. $value . <span class="string">'&lt;br/&gt;'</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/hzp-nb/picbed/master/img/image-20200703204339699.png" alt=""></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/07/24/shuzu/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/" rel="tag">PHP</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2020/07/24/test/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">PHP数组函数的学习</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "欢迎评论~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2020
+        <i class="ri-heart-fill heart_icon"></i> John Doe
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></s>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="xiaoxiao"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">文章列表</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script>
+
+<script src="/js/clickBoom1.js"></script>
+
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+
+
+<link rel="stylesheet" href="/css/clipboard.css">
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+<!-- CanvasBackground -->
+
+
+<script src="/js/dz.js"></script>
+
+
+
+    
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":250},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
